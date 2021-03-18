@@ -1,0 +1,13 @@
+Design:
+
+This program will be written in Java and will contain two seprate files.
+Namely 'PidManager.java' (The main file) & 'PidManagerTest.java' (The test file)
+
+In order to run this application you must use the test file (PidManagerTest.java).
+The main method is contained in the test file in order to test the PidManager class.
+
+The PidManager class has a substantial amount of documentation and can be seen there.
+The PidManagerTest class calls the three methods that were part of the problem description.
+One method to initiatlize the memory, a second to allocate the pid, and finally a third to release it.
+
+The output of the program can be seen in the png file that is part of this directory.
