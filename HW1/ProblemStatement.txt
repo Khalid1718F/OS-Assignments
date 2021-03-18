@@ -1,0 +1,39 @@
+Author: Khalid Ahmed
+
+Assignment: 
+
+An operating system’s pid manager is responsible for managing process identifiers. 
+When a process is first created, it is assigned a unique pid by the pid manager. 
+The pid is returned to the pid manager when the process completes execution, and the manager may later reassign this pid. 
+Process identifiers must be unique; no two active processes may have the same pid. 
+
+Use the following constants to identify the range of possible pid values:
+#define MIN_PID 300
+#define MAX_PID 5000
+You may use any data structure of your choice to represent the availability of process identifiers. 
+One strategy is to adopt what Linux has done and use a bitmap in which a value of 0 at position i  indicates
+that a process id of value i is available and a value of 1 indicates that the process id is currently in use.
+
+Implement the following API for obtaining and releasing a pid:
+•	int allocate_map(void) – Creates and initializes a data structure for representing pids; returns -1 if unsuccessful and 1 if successful
+•	int allocate_pid(void) – Allocates and returns a pid; returns -1 if if unable to allocate a pid (all pids are in use)
+•	void release_pid(int_pid) – Releases a pid.
+
+
+Assumption: 
+
+At the start of a process, the process itself is assigned a unique pid by the pid maanger.
+Upon execution of this process, the pid is then returned to the pid manager and may be subject to reassignment.
+It is imperative that the process identifiers are unique and not be active simultaneously.
+A minimum value for the pid in this problem is set at an integer value of 300.
+A maximum value for the pid is defined at 5000. 
+The representation which denotes the availability of process identifiers can be done through an optional data structure.
+There is an approach which was taken by linux wherein a bitmap has a value of 0 at position i.
+This means that the process is currently available.
+If a value were 1 then that would mean that the process id is currently being used.
+
+• The int allocate_map() method will take in no parameters and will return a sentinel value if the memory allocation is failed.
+• The int allocate_pid() method will also take no parameters and the if pid manager is not initialized and can't be allocated then a warning will take place.
+• The void release_pid(int_pid) takes in a single parameter, then it will either say the pid is out of range or it will release it depending on the condition.
+
+
