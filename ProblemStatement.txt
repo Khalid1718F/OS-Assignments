@@ -1,0 +1,24 @@
+Author: Khalid Ahmed
+
+Assignment:
+
+Write a multithreaded program that tests your solution to HW#1. 
+You will create several threads – for example, 100 – and each thread will request a pid, 
+sleep for a random period of time, and then release the pid. 
+(Sleeping for a random period approximates the typical pid usage in which a pid is assigned to a new process, 
+the process executes and terminates, and the pid is released on the process’ termination). 
+
+On UNIX and Linux systems, sleeping is accomplished through the sleep() function, 
+which is passed an integer value representing the number of seconds to sleep. 
+
+
+Assumption:
+
+This program involves multithreads and tests the solution to the problem in the first homework.
+Several threads are created and each one requests a Pid from the manager. 
+The Pid is then allowed to sleep for a certain amount of time and then released after a given duration.
+When a pid is assigned to a new processthe typical amount of time taken for that is randomized.
+Once the process executes and terminates the pid is released which what sleeping is.
+
+This sleeping process can be done through a sleep() function on Linux and Unix systems.
+The function is passed a value of type int to represent the number of sleep seconds.
